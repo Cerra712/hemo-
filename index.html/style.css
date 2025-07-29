@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.sala {
+  margin-bottom: 40px;
+}
+h3 {
+  margin-bottom: 10px;
+}
+.seating {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 20px;
+}
+.seat {
+  width: 70px;
+  height: 90px;
+  color: green;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  user-select: none;
+  border-radius: 8px;
+}
+.seat:hover {
+  filter: brightness(1.2);
+}
+.seat.occupied {
+  color: red;
+}
+.seat.countdown {
+  color: blue;
+}
+.seat-number {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  background: white;
+  border-radius: 3px;
+  padding: 1px 5px;
+  user-select: none;
+}
+.seat-time {
+  font-size: 10px;
+  color: black;
+  margin-top: 4px;
+  white-space: pre-line;
+  text-align: center;
+  user-select: none;
+}
+.seat-icon {
+  pointer-events: none;
+}
